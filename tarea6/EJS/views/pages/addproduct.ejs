@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+    
+    <main>
+        <h3>Agregar producto</h3>
+        <form action="agregarproductos" method="post">
+            <input type="hidden" name="id" value="1">
+            <input type="text" name="nombre" placeholder="Nombre del producto">
+            <input type="number" name="precio" placeholder="Ejemplo: 1500">
+            <input type="submit" value="Agregar producto">
+        </form>
+        <br>
+        <div class="jumbotron">
+            <%- include('../partials/list'); %>
+            
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+</html>

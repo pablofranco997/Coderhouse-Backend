@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+    
+    <main>
+        <h3>Buscar producto por ID</h3>
+        <form action="productoshtml" method="get">
+            <input type="number" name="id" placeholder="ID del producto">
+            <input type="submit" value="Ver producto por id">
+        </form>
+        <br>
+        <div class="jumbotron">
+            <%- include('../partials/list'); %>
+            
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+</html>

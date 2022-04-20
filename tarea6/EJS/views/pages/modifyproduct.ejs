@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+    
+    <main>
+        <h3>Modificar producto por ID</h3>
+        <form action="productomod" method="post">
+            <input type="number" name="id" placeholder="ID del producto a modificar">
+            <p>Modificar:</p>
+            <input type="text" name="nombre" placeholder="Nombre del producto">
+            <input type="number" name="precio" placeholder="Ejemplo: 1500">
+            <input type="submit" value="Modificar">
+        </form>
+        <br>
+        <div class="jumbotron">
+            <%- include('../partials/list'); %>
+            
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+</html>
