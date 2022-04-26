@@ -117,6 +117,6 @@ app.post('/deleteproduct', (req, resp) =>{
     }
 })
 
-const server = app.listen(8000, () => {
-    console.log('La aplicacion express esta escuchando');
+const server = app.listen(8010, () => {
+    console.log('La aplicacion express esta escuchando: puerto 8010');
 })
