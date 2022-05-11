@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./chat.js"></script>
+</head>
+<body class="container">
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+    <main>
+        <div class="jumbotron">
+            <h1>Mi app chat</h1>
+        </div>
+        <form onsubmit="addMessage(this)">
+            <input type="text" id="username" placeholder="Tu Nombre">
+            <input type="text" id="texto" placeholder="Ingrese su mensaje">
+            <input type="submit" value="Enviar"> 
+        </form>
+        <div id="messages"></div>
+    </main>
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+</html>

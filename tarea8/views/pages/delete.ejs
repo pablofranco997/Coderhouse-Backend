@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+    <header>
+        <%- include('../partials/header'); %>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="./delete.js"></script>
+    </header>
+    
+    <main>
+        <h3>Eliminar producto</h3>
+        <form onsubmit="deleteProducts(this)">
+            <input type="number" id="_id" placeholder="ID del producto a ELIMINAR">
+            <input type="text" id="confirmation" placeholder="Escriba 'SI' en mayusculas para confirmar">
+            <input type="submit" value="ELIMINAR PRODUCTO">
+        </form>
+        <br>
+        <div class="jumbotron">
+            <table class="table">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">precio</th>
+                    </tr>
+                </thead>
+                <tbody id="products">
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+</html>
