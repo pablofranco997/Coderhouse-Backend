@@ -1,0 +1,32 @@
+[
+	{
+		"name": "Pizza",
+		"price": 125,
+		"id": 1
+	},
+	{
+		"name": "Tacos",
+		"price": 125,
+		"id": 2
+	},
+	{
+		"name": "Burrito",
+		"price": 125,
+		"id": 3
+	},
+	{
+		"name": "Tostada",
+		"price": 125,
+		"id": 4
+	},
+	{
+		"name": "Empanada",
+		"price": 125,
+		"id": 5
+	},
+	{
+		"name": "Hamburguesa",
+		"price": 125,
+		"id": 6
+	}
+]

@@ -1,0 +1,15 @@
+-use ecommerce
+-db.mensajes.insert([{user:"pablo_martinez",date:new Date(),mensaje:"prueba 1"},{user:"pablo_martinez",date:new Date(),mensaje:"prueba 2"},{user:"pablo_martinez",date:new Date(),mensaje:"prueba 3"},{user:"pablo_martinez",date:new Date(),mensaje:"prueba 4"},{user:"pablo_martinez",date:new Date(),mensaje:"prueba 5"},{user:"pablo_martinez",date:new Date(),mensaje:"prueba 6"},{user:"pablo_martinez",date:new Date(),mensaje:"prueba 7"},{user:"pablo_martinez",date:new Date(),mensaje:"prueba 8"},{user:"pablo_martinez",date:new Date(),mensaje:"prueba 9"},{user:"pablo_martinez",date:new Date(),mensaje:"prueba 10"}])
+-db.productos.insert([{name:"pizza", price:250},{name:"hamburguer",price:150},{name:"sushi",price:150},,{name:"Corte de carne Kobe",price:4500},{name:"tacos",price:100},{name:"hotdog",price:100},{name:"caviar",price:2500},{name:"Empanadas",price:120},{name:"Vodka",price:350},{name:"Cerveza (six-pack)",price:250}])
+-db.mensajes.find()
+-db.productos.find()
+-db.productos.count()
+-db.mensajes.count() 
+-db.productos.insertOne({name:"arroz", price:100})
+-db.productos.find({"price": {$lt: 1000}})
+-db.productos.find({"price": {$lt: 3000,$gt:1000}})
+-db.productos.find({"price": {$gt:3000}})
+-db.productos.find({"price.2":{$gt:99}},{"price":0,"_id":0})
+-db.productos.updateMany({},{$set:{stock:100}})
+-use admin
+-db.createUser({user: "pepe", pwd: "asd456", roles: [{role: "read", db: "ecommerce"}]})
