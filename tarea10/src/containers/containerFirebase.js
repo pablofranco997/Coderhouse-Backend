@@ -1,6 +1,5 @@
 let admin = require('firebase-admin')
-let { FIRESTORE_FILE } = require('../config/globals')
-const FIRESTORE_PATH_FILE = require(FIRESTORE_FILE)
+const FIRESTORE_PATH_FILE = require('./../../utilities/firebase/backendcoder-eee3f-firebase-adminsdk-bfk5v-8b16d5fd19.json')
 
 admin.initializeApp({
   credential: admin.credential.cert(FIRESTORE_PATH_FILE)
@@ -39,13 +38,13 @@ class ContainerFirestore {
     return item
   }
 
-  async delete(id){
+  async deleteById(id){
     let doc = this.collection.doc(`${id}`)
     let item = doc.delete()
     return ({ status: 'Deleted' })
   }
 
-  async update(content, id){
+  async updateById(id,content){
     let doc = this.collection.doc(`${id}`)
     let item = await doc.update(content)
     return item

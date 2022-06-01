@@ -20,7 +20,7 @@ class CartDaoFile extends ContainerFile {
         }else{
             newElem.id=parseInt((parseInt(elems[elems.length-1].id))+1);
         }
-        let newElemFilt = {id:newElem.id,name:newElem.id,products:newElem.products}
+        let newElemFilt = {id:newElem.id,name:newElem.name,products:newElem.products}
         elems.push(newElemFilt);
         this.saveInFile(elems)
         return elems

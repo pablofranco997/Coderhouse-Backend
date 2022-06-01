@@ -2,8 +2,16 @@ const express = require('express')
 const { Router } = express
 const productsRouter = Router()
 
-const { ProductDaoFile } = require('../daos/productos/productsFs.js')
-const productDao = new ProductDaoFile()
+// const { ProductDaoFile } = require('../daos/productos/productsFs.js')
+// const productDao = new ProductDaoFile()
+
+// const { ProductDaoMongo } = require('../daos/productos/productsMongo')
+// const productDao = new ProductDaoMongo()
+
+const { ProductDaoFirestore } = require('../daos/productos/productsFirebase')
+const productDao = new ProductDaoFirestore()
+
+
 
 productsRouter.get('/', async (req, res) => {
   let products = await productDao.getAll();

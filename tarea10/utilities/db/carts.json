@@ -1,0 +1,26 @@
+[
+	{
+		"id": 1,
+		"name": "Pablo Martínez",
+		"products": [
+			{
+				"id": 1,
+				"quantity": 5
+			},
+			{
+				"id": 3,
+				"quantity": 20
+			}
+		]
+	},
+	{
+		"name": "Jimena Franco",
+		"id": 2,
+		"products": [
+			{
+				"id": 3,
+				"quantity": 1
+			}
+		]
+	}
+]

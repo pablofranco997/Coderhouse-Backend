@@ -10,7 +10,6 @@ class ProductDaoFile extends ContainerFile {
 
     getAll() {
         let products = this.getContentFile();
-
         return products;
     }
 
