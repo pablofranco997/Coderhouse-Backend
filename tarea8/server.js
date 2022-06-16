@@ -13,7 +13,7 @@ const { knexSqLite } = require('./options/sqlite3');
 const crud = require('./cruds_knex');
 
 // Puerto y app uses
-const PORT = 8080;
+const PORT = 8090;
 app.use(express.static('./public'));
 app.use(express.urlencoded({extended:true}));
 app.set('view engine', 'ejs');
@@ -109,6 +109,7 @@ io.on('connection', (socket) => {
             let found = await crud.getProductsId(knexMysql,data.id);
             if(found!=undefined){
                 result = found;
+                console.log(result);
             }
             else{
                 result=[{id:"error", nombre:"producto no encontrado", precio:"-"}]
@@ -117,6 +118,7 @@ io.on('connection', (socket) => {
 
         if(data.id==''){
             result=await crud.getProducts(knexMysql);
+            console.log(result);
         }
         io.sockets.emit('products', result);
     })

@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">precio</th>
+        </tr>
+      </thead>
+      <tbody>
+            <% result.forEach(function(product) { %>
+                <tr>
+                    <th><%= product.id %></th>
+                    <th><%= product.nombre %></th>
+                    <th><%= product.precio %></th> 
+                </tr>     
+            <% }); %>   
+      </tbody>
+</table>

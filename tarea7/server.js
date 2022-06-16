@@ -15,6 +15,9 @@ app.use(express.static('./public'));
 app.use(express.urlencoded({extended:true}));
 app.set('view engine', 'ejs');
 
+
+
+
 // Data transform
 let datatxt = fs.readFileSync('./historialMsg.json', 'utf-8');
 let dataproducts = fs.readFileSync('./products.json', 'utf-8');
